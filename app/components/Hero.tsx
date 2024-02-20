@@ -4,7 +4,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <div className=" flex flex-col md:flex-row py-8 items-center">
-      <div className="flex flex-col space-y-4 flex-1">
+      <div className="flex flex-col space-y-4 flex-1 ">
         <h1 className=" capitalize text-3xl md:text-5xl font-semibold ">
           A Blog For All Ages And Website Lovers
         </h1>
