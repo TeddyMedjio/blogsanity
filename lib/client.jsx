@@ -1,4 +1,5 @@
 import { createClient, groq } from "next-sanity";
+import ImageUrlBuilder from "@sanity/image-url";
 
 export const client = createClient({
   projectId: process.env.SANITY_PROJECT_ID,
@@ -28,4 +29,10 @@ export async function getPosts() {
           "content":body
       }`);
   return posts;
+}
+
+const builder = ImageUrlBuilder(client);
+
+export function urlFor(source) {
+  return builder.image(source);
 }
